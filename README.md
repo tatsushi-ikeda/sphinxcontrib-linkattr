@@ -61,7 +61,7 @@ In near future, I would like to try to register this in PyPi.
 
 - [tests/simple/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/)
 
-    A simple example with a *open in new tab* function and `[external link]` text ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/)).
+    A simple example with an *open in new tab* function and `[external link]` text ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/)).
     
 - [tests/fontawesome/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
 
