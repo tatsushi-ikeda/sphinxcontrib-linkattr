@@ -50,7 +50,7 @@ In near future, I would like to try to register this in PyPi.
     A string/object which is placed after the link texts of external links (See also `linkattr_suffix_internal`). 
     
     
-- `linkattr_translator_dict`: (default: `None`)
+- `linkattr_custom_translator_dict`: (default: `None`)
 
     A dictonary which has `format`:`Translator object` pairs. If you want to use a custom builder class, this may be helpful.
 
