@@ -1,5 +1,4 @@
 from docutils import nodes
-from sphinx.util.docutils import SphinxTranslator
 
 def link_attr_visit_external_reference_advice(func,
                                               attr_internal, suffix_internal,
