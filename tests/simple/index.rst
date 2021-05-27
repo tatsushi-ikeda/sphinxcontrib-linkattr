@@ -1,5 +1,5 @@
 
-simple test for sphinxcontrib.linkattr
+Simple test for sphinxcontrib.linkattr
 ==================================================================
 
 - external link: `GitHub.com <https://github.com/>`_
@@ -11,11 +11,3 @@ simple test for sphinxcontrib.linkattr
    :caption: Contents:
 
    subpage
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
