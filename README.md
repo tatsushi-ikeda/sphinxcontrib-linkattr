@@ -1,3 +1,6 @@
+[![CI](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/actions/workflows/main.yml/badge.svg)](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/actions/workflows/main.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # sphinxcontrib-linkattr
 
 A Sphinx extension, which overrides attributes of internal/external links.
@@ -54,3 +57,21 @@ In near future, I would like to try to register this in PyPi.
 
     A dictonary which has `format`:`Translator object` pairs. If you want to use a custom builder class, this may be helpful.
 
+## Examples
+
+- [tests/simple/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/)
+
+    A simple example with a *open in new tab* function and `[external link]` text ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/)).
+    
+- [tests/fontawesome/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
+
+    An example of the usage of `linkattr_suffix_external` as a `doctutils.nodes` object, which has a [Font Awesome](https://fontawesome.com/) icon ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/)).
+    
+- [tests/backgroundimage/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
+
+    An example of the usage of css with `.external` class and `background-image` attribute. This is inspired by the method Wikipedia employs ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/)).
+    
+## License
+
+MIT License
+    
