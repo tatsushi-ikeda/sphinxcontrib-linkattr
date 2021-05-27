@@ -27,15 +27,22 @@ jobs:
         pip install -e .
     - name: Build
       run: |
+        mkdir publish -p
         pushd tests/simple
         make html
         popd
+        mv tests/simple/_build/html publish/simple
         pushd tests/fontawesome
         make html
         popd
+        mv tests/fontawesome/_build/html publish/fontasewome
+        pushd test/backgroundimage
+        make html
+        popd
+        mv tests/backgroundimage/_build/html publish/backgroundimage
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
-      with:
+      with: ./publish
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: tests/simple/_build
