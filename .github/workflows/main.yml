@@ -35,7 +35,7 @@ jobs:
         pushd tests/fontawesome
         make html
         popd
-        mv tests/fontawesome/_build/html publish/fontasewome
+        mv tests/fontawesome/_build/html publish/fontawesome
         pushd tests/backgroundimage
         make html
         popd
