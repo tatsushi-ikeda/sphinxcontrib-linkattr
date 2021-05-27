@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'simple test for sphinxcontrib.linkattr'
+project = 'a test of sphinxcontrib.linkattr with Font Awesome'
 copyright = '2021, tatsushi-ikeda'
 author = 'tatsushi-ikeda'
 
@@ -52,6 +52,11 @@ html_theme = 'sphinxdoc'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# -- Options for sphinxcontrib.linkattr --------------------------------------
+html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
+                  'custom.css']
 
-linkattr_suffix_external = ' [external link]'
+linkattr_suffix_external = dict(node='raw',
+                                format='html',
+                                text='<i class="fas fa-external-link-alt"></i>')
+
+
