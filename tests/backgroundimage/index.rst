@@ -1,8 +1,7 @@
-
-Test of sphinxcontrib.linkattr with Font Awesome
+Test of sphinxcontrib.linkattr with a background image
 ==============================================================================
 
-- external link: `Font Awesome <https://fontawesome.com/>`_
+- external link: `Scalable Vector Graphics (SVG) <https://www.w3.org/TR/SVG2/>`_ 
 
 - internal link: :doc:`subpage`
 
@@ -11,5 +10,3 @@ Test of sphinxcontrib.linkattr with Font Awesome
    :caption: Contents:
 
    subpage
-
-   
