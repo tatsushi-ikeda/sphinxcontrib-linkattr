@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../..'))
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
@@ -58,5 +58,4 @@ html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
 linkattr_suffix_external = dict(node='raw',
                                 format='html',
                                 text='<i class="fas fa-external-link-alt"></i>')
-
 
