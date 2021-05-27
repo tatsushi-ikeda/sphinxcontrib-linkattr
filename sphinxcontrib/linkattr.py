@@ -9,10 +9,16 @@ def link_attr_visit_external_reference_advice(func,
             for key, value in attr.items():
                 node[key] = value
             if suffix:
-                if isinstance(suffix, str):
-                    node.children.append(nodes.Text(suffix))
+                if isinstance(suffix, dict):
+                    node.children.append(
+                        getattr(nodes, suffix['node'])(**suffix)
+                    )
+                    # Because the update of a configuration is checked by using '!='
+                    # (see _update_config in sphinx/environment/__init__.py),
+                    # the use of Python classes causes misdetection of updates,
+                    # at least at Sphinx v 4.0.2. Hence, we employ the above code.
                 else:
-                    node.children.append(suffix)
+                    node.children.append(nodes.Text(suffix))
         if ('refuri' in node):
             if node.get('internal'):
                 modify_attr(node, attr_internal, suffix_internal)
@@ -23,7 +29,7 @@ def link_attr_visit_external_reference_advice(func,
 
 def link_attr_overrite_reference_visitor(app):
     format = app.builder.format
-    print('format:', format)
+
     if format in app.config.linkattr_translator_dict:
         translator = linkattr_builder_dict[format]
     else:
@@ -62,6 +68,7 @@ def setup(app):
                          None, 'env', (type(None), str, nodes.Node))
     app.add_config_value('linkattr_translator_dict',
                          {}, 'env', dict)
+    nodes.raw(format='html', text='<i class="fas fa-external-link-alt"></i>')
 
     app.connect('builder-inited', link_attr_overrite_reference_visitor)
     
