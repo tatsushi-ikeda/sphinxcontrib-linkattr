@@ -56,15 +56,15 @@ In near future, I would like to try to register this in PyPi.
 
 ## Examples
 
-- [tests/simple/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/):[Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/)
+- [tests/simple/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/)
 
-    A simple example with a *open in new tab* function and `[external link]` text.
+    A simple example with a *open in new tab* function and `[external link]` text ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/)).
     
-- [tests/fontawesome/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/):[Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/)
+- [tests/fontawesome/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
 
-    An example of the usage of `linkattr_suffix_external` as a `doctutils.nodes` object, which has a [Font Awesome](https://fontawesome.com/) icon.
+    An example of the usage of `linkattr_suffix_external` as a `doctutils.nodes` object, which has a [Font Awesome](https://fontawesome.com/) icon ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/)).
     
-- [tests/backgroundimage/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/):[Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/)
+- [tests/backgroundimage/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
 
-    An example of the usage of css with `.external` class and `background-image` attribute. This is inspired by the method Wikipedia employs.
+    An example of the usage of css with `.external` class and `background-image` attribute. This is inspired by the method Wikipedia employs ([Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/)).
     
