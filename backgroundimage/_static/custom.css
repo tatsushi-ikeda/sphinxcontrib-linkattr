@@ -1,0 +1,9 @@
+
+.external {
+    background-image: url(external_link.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size:   16px, 16px;
+    padding-right:     16px;
+}
+
