@@ -26,7 +26,7 @@ In near future, I would like to try to register this in PyPi.
     
 - `linkattr_attr_external`: (default: `{'target': '_blank', 'rel': 'noreferrer noopener'}`)
 
-    Attributes for external links. The default value implements *open in new tab* behavior for the `html` builder.
+    Attributes for external links. The default value implements *open in new tab* behavior for `html` builders.
 
 - `linkattr_suffix_internal`: (default: `None`)
 
