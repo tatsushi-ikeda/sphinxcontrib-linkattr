@@ -29,7 +29,7 @@ In near future, I would like to try to register this in PyPi.
     
 - `linkattr_attr_external`: (default: `{'target': '_blank', 'rel': 'noreferrer noopener'}`)
 
-    Attributes for external links. The default value implements *open in new tab* behavior for the `html` builder.
+    Attributes for external links. The default value implements *open in new tab* behavior for `html` builders.
 
 - `linkattr_suffix_internal`: (default: `None`)
 
@@ -53,17 +53,17 @@ In near future, I would like to try to register this in PyPi.
     A string/object which is placed after the link texts of external links (See also `linkattr_suffix_internal`). 
     
     
-- `linkattr_translator_dict`: (default: `None`)
+- `linkattr_custom_translator_dict`: (default: `None`)
 
     A dictonary which has `format`:`Translator object` pairs. If you want to use a custom builder class, this may be helpful.
 
 ## Examples
 
-[Build Result](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/index.html)
+[Build Results](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/index.html)
 
 - [tests/simple/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/)
 
-    A simple example with a *open in new tab* function and `[external link]` text.
+    A simple example with an *open in new tab* function and `[external link]` text.
     
 - [tests/fontawesome/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/)
 
