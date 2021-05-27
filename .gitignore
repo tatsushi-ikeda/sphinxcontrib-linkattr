@@ -1,0 +1,7 @@
+*.pyc
+*.egg-info
+tests/*/_build
+publish/
+simple/
+fontawesome/
+backgroundimage/
