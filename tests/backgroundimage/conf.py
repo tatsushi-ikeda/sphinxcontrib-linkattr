@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'a test of sphinxcontrib.linkattr with Font Awesome'
+project = 'a test of sphinxcontrib.linkattr with a background image'
 copyright = '2021, tatsushi-ikeda'
 author = 'tatsushi-ikeda'
 
@@ -52,10 +52,5 @@ html_theme = 'sphinxdoc'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-                  'custom.css']
-
-linkattr_suffix_external = dict(node='raw',
-                                format='html',
-                                text='<i class="fas fa-external-link-alt"></i>')
+html_css_files = ['custom.css']
 

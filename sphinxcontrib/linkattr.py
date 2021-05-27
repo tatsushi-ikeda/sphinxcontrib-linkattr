@@ -30,8 +30,8 @@ def link_attr_visit_external_reference_advice(func,
 def link_attr_overrite_reference_visitor(app):
     format = app.builder.format
 
-    if format in app.config.linkattr_translator_dict:
-        translator = linkattr_builder_dict[format]
+    if format in app.config.linkattr_custom_translator_dict:
+        translator = app.config.linkattr_custom_translator_dict[format]
     else:
         import importlib
         WRITERS = {
@@ -60,12 +60,13 @@ def link_attr_overrite_reference_visitor(app):
 def setup(app):
     app.add_config_value('linkattr_attr_internal',
                          {}, 'env', dict)
-    app.add_config_value('linkattr_suffix_internal', None, 'env', (type(None), dict, str))
     app.add_config_value('linkattr_attr_external',
                          {'target': '_blank', 'rel': 'nofollow'}, 'env', dict)
-    app.add_config_value('linkattr_suffix_external', None, 'env', (type(None), dict, str))
-    
-    app.add_config_value('linkattr_translator_dict',
+    app.add_config_value('linkattr_suffix_internal',
+                         None, 'env', (type(None), str, nodes.Node))
+    app.add_config_value('linkattr_suffix_external',
+                         None, 'env', (type(None), str, nodes.Node))
+    app.add_config_value('linkattr_custom_translator_dict',
                          {}, 'env', dict)
     nodes.raw(format='html', text='<i class="fas fa-external-link-alt"></i>')
 
