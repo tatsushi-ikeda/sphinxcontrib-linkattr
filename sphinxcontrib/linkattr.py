@@ -64,6 +64,7 @@ def setup(app):
     app.add_config_value('linkattr_attr_external',
                          {'target': '_blank', 'rel': 'nofollow'}, 'env', dict)
     app.add_config_value('linkattr_suffix_external', None, 'env', (type(None), dict, str))
+    
     app.add_config_value('linkattr_translator_dict',
                          {}, 'env', dict)
     nodes.raw(format='html', text='<i class="fas fa-external-link-alt"></i>')
