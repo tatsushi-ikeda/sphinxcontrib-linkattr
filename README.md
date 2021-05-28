@@ -8,10 +8,8 @@ A Sphinx extension, which overrides attributes of internal/external links.
 ## Install
 
 ```
-pip install git+https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr.git@master
+pip install sphinxcontrib-linkattr
 ```
-
-In near future, I would like to try to register this in PyPi.
 
 ## Usage
 
