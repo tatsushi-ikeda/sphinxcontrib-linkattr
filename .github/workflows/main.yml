@@ -26,6 +26,9 @@ jobs:
         pip install -r requirements.txt
         pip install -e .
     - name: Build
+      env:
+        EMBEDDER: ${{ secrets.EMBEDDER }}
+        EMBEDDED: ${{ secrets.EMBEDDED }}
       run: |
         mkdir publish -p
         pushd tests/simple
@@ -40,6 +43,10 @@ jobs:
         make html
         popd
         mv tests/backgroundimage/_build/html publish/backgroundimage
+        cd publish
+        cat "${EMBEDDER}" > embedder.py
+        cat "${EMBEDDED}" > embedded.xml
+        python3 embedder.py
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
