@@ -3,4 +3,5 @@
 tests/*/_build
 dist
 build
-tests/fontawesome/_static/fontawesome-all.css
+tests/fontawesome/_static/css/*
+tests/fontawesome/_static/webfonts/*
