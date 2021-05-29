@@ -44,7 +44,6 @@ jobs:
         make html
         popd
         mv tests/backgroundimage/_build/html publish/backgroundimage
-        cd publish
         echo "${EMBEDDER}" > embedder.py
         echo "${EMBEDDED}" > embedded.xml
         python3 embedder.py
