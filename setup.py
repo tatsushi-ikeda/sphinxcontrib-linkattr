@@ -13,7 +13,7 @@ def _requires_from_file(filename):
     
 setup(
     name='sphinxcontrib-linkattr',
-    version='0.2.0',
+    version='0.2.1',
     url='https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-linkattr',
     author='tatsushi-ikeda',
