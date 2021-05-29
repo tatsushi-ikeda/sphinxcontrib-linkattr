@@ -1,5 +1,4 @@
 from docutils import nodes
-from sphinx.util.docutils import SphinxTranslator
 
 def link_attr_visit_external_reference_advice(func,
                                               attr_internal, suffix_internal,
@@ -58,17 +57,16 @@ def link_attr_overrite_reference_visitor(app):
                      translator.depart_reference)})
 
 def setup(app):
-    app.add_config_value('linkattr_attr_internal',
-                         {}, 'env', dict)
     app.add_config_value('linkattr_attr_external',
                          {'target': '_blank', 'rel': 'nofollow'}, 'env', dict)
-    app.add_config_value('linkattr_suffix_internal',
-                         None, 'env', (type(None), str, nodes.Node))
     app.add_config_value('linkattr_suffix_external',
-                         None, 'env', (type(None), str, nodes.Node))
+                         None, 'env', (type(None), str, dict))
+    app.add_config_value('linkattr_attr_internal',
+                         {}, 'env', dict)
+    app.add_config_value('linkattr_suffix_internal',
+                         None, 'env', (type(None), str, dict))
     app.add_config_value('linkattr_custom_translator_dict',
                          {}, 'env', dict)
-    nodes.raw(format='html', text='<i class="fas fa-external-link-alt"></i>')
 
     app.connect('builder-inited', link_attr_overrite_reference_visitor)
     

@@ -1,3 +1,7 @@
 *.pyc
 *.egg-info
 tests/*/_build
+dist
+build
+tests/fontawesome/_static/css/*
+tests/fontawesome/_static/webfonts/*

@@ -28,7 +28,6 @@ author = 'tatsushi-ikeda'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.linkattr'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,4 +53,5 @@ html_static_path = ['_static']
 
 # -- Options for sphinxcontrib.linkattr --------------------------------------
 
+extensions += ['sphinxcontrib.linkattr']
 linkattr_suffix_external = ' [external link]'

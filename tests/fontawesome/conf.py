@@ -28,7 +28,6 @@ author = 'tatsushi-ikeda'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.linkattr'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,12 +49,12 @@ html_theme = 'sphinxdoc'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
 
-html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-                  'custom.css']
+# -- Options for sphinxcontrib.linkattr --------------------------------------
 
-linkattr_suffix_external = dict(node='raw',
-                                format='html',
+html_static_path = ['_static', '_static/css', '_static/webfonts']
+html_css_files   = ['css/fontawesome-all.css', 'custom.css']
+extensions += ['sphinxcontrib.linkattr']
+linkattr_suffix_external = dict(node='raw', format='html',
                                 text='<i class="fas fa-external-link-alt"></i>')
 
