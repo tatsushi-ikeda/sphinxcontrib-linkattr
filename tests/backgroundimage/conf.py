@@ -28,7 +28,6 @@ author = 'tatsushi-ikeda'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.linkattr'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,5 +51,8 @@ html_theme = 'sphinxdoc'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# -- Options for sphinxcontrib.linkattr --------------------------------------
+
+extensions += ['sphinxcontrib.linkattr']
 html_css_files = ['custom.css']
 
