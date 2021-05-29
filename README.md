@@ -99,7 +99,7 @@ extensions += ['sphinxcontrib.linkattr']
             padding-right:     16px;
         }
         ```
-    - You need to place an image file as `static/_external_link.svg`.
+    - You need to place an image file as `_static/external_link.svg`.
     
 ## License
 
