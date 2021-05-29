@@ -53,10 +53,7 @@ html_static_path = ['_static']
 
 # -- Options for sphinxcontrib.linkattr --------------------------------------
 
-# 
-html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-                  'custom.css']
-
+html_css_files = ['fontawesome-all.css', 'custom.css']
 extensions += ['sphinxcontrib.linkattr']
 linkattr_suffix_external = dict(node='raw',
                                 format='html',

@@ -64,9 +64,8 @@ extensions += ['sphinxcontrib.linkattr']
     
     - In `conf.py`
         ```Python
+        html_css_files = ['fontawesome-all.css', 'custom.css']
         extensions += ['sphinxcontrib.linkattr']
-        html_css_files = ['https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-                          'custom.css']
         linkattr_suffix_external = dict(node='raw',
                                         format='html',
                                         text='<i class="fas fa-external-link-alt"></i>')
@@ -80,6 +79,7 @@ extensions += ['sphinxcontrib.linkattr']
             margin-left: 0.2em;
         }
         ```
+    - You need to download (`fontawesome-all.css`)[https://fontawesome.com/v5.0/how-to-use/on-the-web/setup/getting-started] and place it into `_static/`.
     
 - [tests/backgroundimage/](https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/): ([demo](https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/index.html))
 
@@ -99,7 +99,7 @@ extensions += ['sphinxcontrib.linkattr']
             padding-right:     16px;
         }
         ```
-    - You need an image file as `_static/_external_link.svg`.
+    - You need to place an image file as `_static/_external_link.svg`.
     
 ## License
 
