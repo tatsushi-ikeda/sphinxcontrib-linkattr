@@ -60,11 +60,11 @@ def setup(app):
     app.add_config_value('linkattr_attr_external',
                          {'target': '_blank', 'rel': 'nofollow'}, 'env', dict)
     app.add_config_value('linkattr_suffix_external',
-                         None, 'env', (type(None), str, nodes.Node))
+                         None, 'env', (type(None), str, dict))
     app.add_config_value('linkattr_attr_internal',
                          {}, 'env', dict)
     app.add_config_value('linkattr_suffix_internal',
-                         None, 'env', (type(None), str, nodes.Node))
+                         None, 'env', (type(None), str, dict))
     app.add_config_value('linkattr_custom_translator_dict',
                          {}, 'env', dict)
 
