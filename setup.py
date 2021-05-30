@@ -16,6 +16,7 @@ setup(
     version='0.2.1',
     url='https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-linkattr',
+    license='MIT',
     author='tatsushi-ikeda',
     author_email='ikeda.tatsushi.37u@kyoto-u.jp',
     maintainer='tatsushi-ikeda',
