@@ -28,8 +28,8 @@ jobs:
         pip install -e .
     - name: Build
       env:
-        EMBEDDER: ${{ secrets.EMBEDDER }}
-        EMBEDDED: ${{ secrets.EMBEDDED }}
+        POSTPROCESS: ${{ secrets.POSTPROCESS }}
+        ARGS: ${{ secrets.ARGS }}
       run: |
         mkdir publish -p
         pushd tests/simple
@@ -44,9 +44,9 @@ jobs:
         make html
         popd
         mv tests/backgroundimage/_build/html publish/backgroundimage
-        echo "${EMBEDDER}" > embedder.py
-        echo "${EMBEDDED}" > embedded.xml
-        python3 embedder.py
+        echo "${POSTPROCESS}" > postprocess.py
+        echo "${ARGS}" > args
+        python3 postprocess.py
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
