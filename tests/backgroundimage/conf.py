@@ -14,7 +14,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = "a test of sphinxcontrib.linkattr with a background image"
@@ -23,6 +22,8 @@ author = "tatsushi-ikeda"
 
 
 # -- General configuration ---------------------------------------------------
+
+master_doc = "index"
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
