@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
-<title>Test of sphinxcontrib.linkattr with Font Awesome — a test of sphinxcontrib.linkattr with Font Awesome  documentation</title>
+<title>Example of sphinxcontrib.linkattr with Font Awesome — a test of sphinxcontrib.linkattr with Font Awesome  documentation</title>
 <link rel="stylesheet" type="text/css" href="_static/pygments.css">
 <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css">
 <link rel="stylesheet" type="text/css" href="_static/css/fontawesome-all.css">
@@ -32,7 +32,7 @@
           <a href="subpage.html" title="Subpage" accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0">
 <a href="#">a test of sphinxcontrib.linkattr with Font Awesome  documentation</a> »</li>
-        <li class="nav-item nav-item-this"><a href="">Test of sphinxcontrib.linkattr with Font Awesome</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example of sphinxcontrib.linkattr with Font Awesome</a></li> 
       </ul>
 </div>  
 
@@ -41,9 +41,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="test-of-sphinxcontrib-linkattr-with-font-awesome"><h1>Test of sphinxcontrib.linkattr with Font Awesome<a class="headerlink" href="#test-of-sphinxcontrib-linkattr-with-font-awesome" title="Permalink to this headline">¶</a>
+  <section id="example-of-sphinxcontrib-linkattr-with-font-awesome"><h1>Example of sphinxcontrib.linkattr with Font Awesome<a class="headerlink" href="#example-of-sphinxcontrib-linkattr-with-font-awesome" title="Permalink to this headline">¶</a>
 </h1>
 <p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr" target="_blank">Homepage<i class="fas fa-external-link-alt"></i></a></p>
+<section id="demo"><h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a>
+</h2>
 <ul class="simple">
 <li><p>external link: <a class="reference external" href="https://fontawesome.com/" target="_blank">Font Awesome<i class="fas fa-external-link-alt"></i></a></p></li>
 <li><p>internal link: <a class="reference internal" href="subpage.html"><span class="doc">Subpage</span></a></p></li>
@@ -54,13 +56,71 @@
 <li class="toctree-l1"><a class="reference internal" href="subpage.html">Subpage</a></li>
 </ul>
 </div>
-</section><div class="clearer"></div>
+</section><section id="other-demos"><h2>Other Demos<a class="headerlink" href="#other-demos" title="Permalink to this headline">¶</a>
+</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/" target="_blank">*open in new tab* link<i class="fas fa-external-link-alt"></i></a></p></li>
+<li><p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/backgroundiamge/" target="_blank">*open in new tab* link with a svg image icon<i class="fas fa-external-link-alt"></i></a></p></li>
+</ul></section><hr class="docutils">
+<section id="from-readme-md"><h2>From <a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/blob/master/README.md" target="_blank">README.md<i class="fas fa-external-link-alt"></i></a><a class="headerlink" href="#from-readme-md" title="Permalink to this headline">¶</a>
+</h2>
+<p>A Sphinx extension, which overrides attributes of internal/external links.</p>
+<ul>
+<li>
+<p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/" target="_blank">tests/fontawesome/<i class="fas fa-external-link-alt"></i></a>: (demo: this page)</p>
+<blockquote>
+<div>
+<p>An example of the usage of <cite>linkattr_suffix_external</cite> as a <cite>doctutils.nodes</cite> object, which has a <a class="reference external" href="https://fontawesome.com/" target="_blank">Font Awesome<i class="fas fa-external-link-alt"></i></a> icon.</p>
+<ul>
+<li>
+<p>In <cite>conf.py</cite></p>
+<blockquote>
+<div>
+<div class="highlight-python notranslate">
+<div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'_static'</span><span class="p">,</span> <span class="s1">'_static/css'</span><span class="p">,</span> <span class="s1">'_static/webfonts'</span><span class="p">]</span>
+<span class="n">html_css_files</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">'css/fontawesome-all.css'</span><span class="p">,</span> <span class="s1">'custom.css'</span><span class="p">]</span>
+<span class="n">extensions</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">'sphinxcontrib.linkattr'</span><span class="p">]</span>
+<span class="n">linkattr_suffix_external</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="s1">'raw'</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'html'</span><span class="p">,</span>
+                                <span class="n">text</span><span class="o">=</span><span class="s1">'&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt;'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</blockquote>
+</li>
+<li>
+<p>In <cite>_static/custom.css</cite></p>
+<div class="highlight-css notranslate">
+<div class="highlight"><pre><span></span><span class="nt">i</span><span class="p">.</span><span class="nc">fas</span><span class="p">.</span><span class="nc">fa-external-link-alt</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#AAAAAA</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">0.2</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mf">0.2</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>You will need to download <a class="reference external" href="https://fontawesome.com/v5.0/how-to-use/on-the-web/setup/getting-started" target="_blank">fontawesome-*.zip<i class="fas fa-external-link-alt"></i></a> and place <cite>css/fontawesome-all.css</cite> and <cite>webfonts/*</cite> into <cite>_static/</cite> (See also <a class="reference external" href="https://fontawesome.com/v5.0/how-to-use/on-the-web/setup/getting-started" target="_blank">Hosting Font Awesome Yourself<i class="fas fa-external-link-alt"></i></a>).</p></li>
+</ul>
+</div>
+</blockquote>
+</li>
+</ul></section></section><div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Next topic</h4>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li>
+<a class="reference internal" href="#">Example of sphinxcontrib.linkattr with Font Awesome</a><ul>
+<li><a class="reference internal" href="#demo">Demo</a></li>
+<li><a class="reference internal" href="#other-demos">Other Demos</a></li>
+<li><a class="reference internal" href="#from-readme-md">From README.md</a></li>
+</ul>
+</li>
+</ul>
+<h4>Next topic</h4>
   <p class="topless"><a href="subpage.html" title="next chapter">Subpage</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -91,7 +151,7 @@
           <a href="subpage.html" title="Subpage">next</a> |</li>
         <li class="nav-item nav-item-0">
 <a href="#">a test of sphinxcontrib.linkattr with Font Awesome  documentation</a> »</li>
-        <li class="nav-item nav-item-this"><a href="">Test of sphinxcontrib.linkattr with Font Awesome</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example of sphinxcontrib.linkattr with Font Awesome</a></li> 
       </ul>
 </div>
     <div class="footer" role="contentinfo">

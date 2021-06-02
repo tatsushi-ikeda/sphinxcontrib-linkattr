@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/">
-<title>Test of sphinxcontrib.linkattr with a background image — a test of sphinxcontrib.linkattr with a background image  documentation</title>
+<title>Example of sphinxcontrib.linkattr with a background image — a test of sphinxcontrib.linkattr with a background image  documentation</title>
 <link rel="stylesheet" type="text/css" href="_static/pygments.css">
 <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css">
 <link rel="stylesheet" type="text/css" href="_static/custom.css">
@@ -31,7 +31,7 @@
           <a href="subpage.html" title="Subpage" accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0">
 <a href="#">a test of sphinxcontrib.linkattr with a background image  documentation</a> »</li>
-        <li class="nav-item nav-item-this"><a href="">Test of sphinxcontrib.linkattr with a background image</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example of sphinxcontrib.linkattr with a background image</a></li> 
       </ul>
 </div>  
 
@@ -40,9 +40,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="test-of-sphinxcontrib-linkattr-with-a-background-image"><h1>Test of sphinxcontrib.linkattr with a background image<a class="headerlink" href="#test-of-sphinxcontrib-linkattr-with-a-background-image" title="Permalink to this headline">¶</a>
+  <section id="example-of-sphinxcontrib-linkattr-with-a-background-image"><h1>Example of sphinxcontrib.linkattr with a background image<a class="headerlink" href="#example-of-sphinxcontrib-linkattr-with-a-background-image" title="Permalink to this headline">¶</a>
 </h1>
 <p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr" target="_blank">Homepage</a></p>
+<section id="demo"><h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a>
+</h2>
 <ul class="simple">
 <li><p>external link: <a class="reference external" href="https://www.w3.org/TR/SVG2/" target="_blank">Scalable Vector Graphics (SVG)</a></p></li>
 <li><p>internal link: <a class="reference internal" href="subpage.html"><span class="doc">Subpage</span></a></p></li>
@@ -53,13 +55,72 @@
 <li class="toctree-l1"><a class="reference internal" href="subpage.html">Subpage</a></li>
 </ul>
 </div>
-</section><div class="clearer"></div>
+</section><section id="other-demos"><h2>Other Demos<a class="headerlink" href="#other-demos" title="Permalink to this headline">¶</a>
+</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/" target="_blank">*open in new tab* link</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/" target="_blank">*open in new tab* link with a Font Awesome icon</a></p></li>
+</ul></section><hr class="docutils">
+<section id="from-readme-md"><h2>From <a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/blob/master/README.md" target="_blank">README.md</a><a class="headerlink" href="#from-readme-md" title="Permalink to this headline">¶</a>
+</h2>
+<p>A Sphinx extension, which overrides attributes of internal/external links.</p>
+<ul>
+<li>
+<p><a class="reference external" href="https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/" target="_blank">tests/backgroundimage/</a>: (demo: this page)</p>
+<blockquote>
+<div>
+<p>An example of the usage of css with <cite>.external</cite> class and <cite>background-image</cite> attribute. This is inspired by the method Wikipedia employs.</p>
+<ul>
+<li>
+<p>In <cite>conf.py</cite></p>
+<blockquote>
+<div>
+<div class="highlight-python notranslate">
+<div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">'sphinxcontrib.linkattr'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</blockquote>
+</li>
+<li>
+<p>In <cite>_static/custom.css</cite></p>
+<blockquote>
+<div>
+<div class="highlight-css notranslate">
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">external</span> <span class="p">{</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">external_link.svg</span><span class="p">);</span>
+    <span class="k">background-position</span><span class="p">:</span> <span class="kc">center</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+    <span class="k">background-size</span><span class="p">:</span>   <span class="mi">16</span><span class="kt">px</span><span class="p">,</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding-right</span><span class="p">:</span>     <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</blockquote>
+</li>
+<li><p>You will need to place an image file as <cite>_static/external_link.svg</cite>.</p></li>
+</ul>
+</div>
+</blockquote>
+</li>
+</ul></section></section><div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Next topic</h4>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li>
+<a class="reference internal" href="#">Example of sphinxcontrib.linkattr with a background image</a><ul>
+<li><a class="reference internal" href="#demo">Demo</a></li>
+<li><a class="reference internal" href="#other-demos">Other Demos</a></li>
+<li><a class="reference internal" href="#from-readme-md">From README.md</a></li>
+</ul>
+</li>
+</ul>
+<h4>Next topic</h4>
   <p class="topless"><a href="subpage.html" title="next chapter">Subpage</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -90,7 +151,7 @@
           <a href="subpage.html" title="Subpage">next</a> |</li>
         <li class="nav-item nav-item-0">
 <a href="#">a test of sphinxcontrib.linkattr with a background image  documentation</a> »</li>
-        <li class="nav-item nav-item-this"><a href="">Test of sphinxcontrib.linkattr with a background image</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example of sphinxcontrib.linkattr with a background image</a></li> 
       </ul>
 </div>
     <div class="footer" role="contentinfo">
