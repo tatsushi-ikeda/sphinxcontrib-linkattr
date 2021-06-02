@@ -21,8 +21,8 @@ Demo
 Other Demos
 ===========
 
-- `*open in new tab* link <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/>`_
-- `*open in new tab* link with a svg image icon <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/backgroundiamge/>`_
+- `*open in new tab* link <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/index.html>`_
+- `*open in new tab* link with a svg image icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/index.html>`_
 
 -----
 

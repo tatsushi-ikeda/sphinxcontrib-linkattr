@@ -20,8 +20,8 @@ Demo
 Other Demos
 ===========
 
-- `*open in new tab* link <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/>`_
-- `*open in new tab* link with a Font Awesome icon <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/>`_
+- `*open in new tab* link <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/index.html>`_
+- `*open in new tab* link with a svg image icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/index.html>`_
 
 -----
 
@@ -30,7 +30,7 @@ From `README.md <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/blob/m
 
 A Sphinx extension, which overrides attributes of internal/external links.
 
-- `tests/backgroundimage/ <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/>`_: (demo: this page)
+- `tests/backgroundimage/ <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/backgroundimage/>`_: (demo: this page)
 
     An example of the usage of css with `.external` class and `background-image` attribute. This is inspired by the method Wikipedia employs.
 
