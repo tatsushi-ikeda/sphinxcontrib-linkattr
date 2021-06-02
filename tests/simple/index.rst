@@ -20,8 +20,8 @@ Demo
 Other Demos
 ===========
 
-- `*open in new tab* link with a Font Awesome icon <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/fontawesome/>`_
-- `*open in new tab* link with a svg image icon <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/backgroundiamge/>`_
+- `*open in new tab* link with a Font Awesome icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/index.html>`_
+- `*open in new tab* link with a svg image icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/index.html>`_
 
 -----
 
