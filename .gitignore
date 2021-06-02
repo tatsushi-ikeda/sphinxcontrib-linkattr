@@ -3,5 +3,8 @@
 tests/*/_build
 dist
 build
+.tox
+poetry.lock
 tests/fontawesome/_static/css/*
 tests/fontawesome/_static/webfonts/*
+
