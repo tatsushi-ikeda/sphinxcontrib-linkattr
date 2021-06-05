@@ -34,13 +34,13 @@ jobs:
         mkdir publish -p
         pushd tests/simple
         echo "extensions += ['sphinx_sitemap']" >> conf.py
-        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-cjkspacer/simple/'" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/'" >> conf.py
         make html
         popd
         mv tests/simple/_build/html publish/simple
         pushd tests/fontawesome
         echo "extensions += ['sphinx_sitemap']" >> conf.py
-        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-cjkspacer/fontawesome/'" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/'" >> conf.py
         make html
         popd
         mv tests/fontawesome/_build/html publish/fontawesome
@@ -49,7 +49,7 @@ jobs:
         popd
         mv tests/backgroundimage/_build/html publish/backgroundimage
         echo "extensions += ['sphinx_sitemap']" >> conf.py
-        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-cjkspacer/backgroundimage/'" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/'" >> conf.py
         echo "${POSTPROCESS}" > postprocess.py
         echo "${ARGS}" > args
         python3 postprocess.py
