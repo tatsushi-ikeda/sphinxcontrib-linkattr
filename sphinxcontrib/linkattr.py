@@ -30,7 +30,8 @@ def link_attr_visit_external_reference_advice(
 
 def link_attr_overrite_reference_visitor(app):
     format = app.builder.format
-
+    translator = None
+    
     if format in app.config.linkattr_custom_translator_dict:
         translator = app.config.linkattr_custom_translator_dict[format]
     else:
@@ -38,6 +39,7 @@ def link_attr_overrite_reference_visitor(app):
 
         WRITERS = {
             "text": ("sphinx.writers.text", "TextTranslator"),
+            "gettext": ("sphinx.writers.gettext", "TextTranslator"),
             "html": ("sphinx.writers.html", "HTMLTranslator"),
             "latex": ("sphinx.writers.latex", "LaTeXTranslator"),
             "manpage": ("sphinx.writers.manpage", "TexinfoTranslator"),
@@ -47,24 +49,23 @@ def link_attr_overrite_reference_visitor(app):
             translator = getattr(
                 importlib.import_module(WRITERS[format][0]), WRITERS[format][1]
             )
-        else:
-            raise ValueError("unknown format.")
-    app.add_node(
-        nodes.reference,
-        override=True,
-        **{
-            format: (
-                link_attr_visit_external_reference_advice(
-                    translator.visit_reference,
-                    app.config.linkattr_attr_internal,
-                    app.config.linkattr_suffix_internal,
-                    app.config.linkattr_attr_external,
-                    app.config.linkattr_suffix_external,
-                ),
-                translator.depart_reference,
-            )
-        }
-    )
+    if translator is not None:
+        app.add_node(
+            nodes.reference,
+            override=True,
+            **{
+                format: (
+                    link_attr_visit_external_reference_advice(
+                        translator.visit_reference,
+                        app.config.linkattr_attr_internal,
+                        app.config.linkattr_suffix_internal,
+                        app.config.linkattr_attr_external,
+                        app.config.linkattr_suffix_external,
+                    ),
+                    translator.depart_reference,
+                )
+            }
+        )
 
 
 def setup(app):
