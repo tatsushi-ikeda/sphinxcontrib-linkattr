@@ -1,12 +1,11 @@
-======================================
-Simple test for sphinxcontrib.linkattr
-======================================
-
-.. meta::
-   :description: A Sphinx extension, which overrides attributes of internal/external links. This can be used to implement open-in-new-tab behavior.
-   :keywords: Python, Sphinx, open-in-new-tab
+=================================
+Example of sphinxcontrib.linkattr
+=================================
 
 `Homepage <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr>`_
+
+Demo
+====
 
 - external link: `GitHub.com <https://github.com/>`_
 
@@ -17,3 +16,29 @@ Simple test for sphinxcontrib.linkattr
    :caption: Contents:
 
    subpage
+
+Other Demos
+===========
+
+- `*open in new tab* link with a Font Awesome icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/index.html>`_
+
+- `*open in new tab* link with a svg image icon <https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/index.html>`_
+
+-----
+
+From `README.md <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/blob/master/README.md>`_
+===================================================================================================
+
+A Sphinx extension, which overrides attributes of internal/external links.
+
+- `tests/simple/ <https://github.com/tatsushi-ikeda/sphinxcontrib-linkattr/tree/master/tests/simple/>`_ (demo: this page)
+
+    A simple example with an *open in new tab* function and a suffix `[external link]`.
+        
+    - In `conf.py`
+    
+        .. code-block:: python
+        
+            extensions += ['sphinxcontrib.linkattr']
+            linkattr_suffix_external = ' [external link]'
+

@@ -24,19 +24,23 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install lxml
+        pip install sphinx-sitemap lxml
         pip install -e .
     - name: Build
       env:
-        EMBEDDER: ${{ secrets.EMBEDDER }}
-        EMBEDDED: ${{ secrets.EMBEDDED }}
+        POSTPROCESS: ${{ secrets.POSTPROCESS }}
+        ARGS: ${{ secrets.ARGS }}
       run: |
         mkdir publish -p
         pushd tests/simple
+        echo "extensions += ['sphinx_sitemap']" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/simple/'" >> conf.py
         make html
         popd
         mv tests/simple/_build/html publish/simple
         pushd tests/fontawesome
+        echo "extensions += ['sphinx_sitemap']" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/fontawesome/'" >> conf.py
         make html
         popd
         mv tests/fontawesome/_build/html publish/fontawesome
@@ -44,9 +48,11 @@ jobs:
         make html
         popd
         mv tests/backgroundimage/_build/html publish/backgroundimage
-        echo "${EMBEDDER}" > embedder.py
-        echo "${EMBEDDED}" > embedded.xml
-        python3 embedder.py
+        echo "extensions += ['sphinx_sitemap']" >> conf.py
+        echo "html_baseurl = 'https://tatsushi-ikeda.github.io/sphinxcontrib-linkattr/backgroundimage/'" >> conf.py
+        echo "${POSTPROCESS}" > postprocess.py
+        echo "${ARGS}" > args
+        python3 postprocess.py
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
